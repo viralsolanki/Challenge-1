@@ -34,9 +34,9 @@ on theme activation a menu called **my_primary_menu** will be created which will
 
 Few custom widgets will be created on the theme activation.
 
-# LATEST NEWS - List All the posts of 'News' category.
-# STAY-IN-TOUCH - Add social media links in yor Website like facebook, twitter, linkdin etc.
-# MY Navigation - Display a menu contains a list of links.
+* LATEST NEWS - List All the posts of 'News' category.
+* STAY-IN-TOUCH - Add social media links in yor Website like facebook, twitter, linkdin etc.
+* MY Navigation - Display a menu contains a list of links.
 
 Widgets can be used by dragging it to the sidebar called **Footer Widegts**.
 
@@ -53,18 +53,18 @@ Widgets can be used by dragging it to the sidebar called **Footer Widegts**.
 On theme activation following pages wil be created :
 
 * Home
-	*Environment
-	   * Environment_child_1
-	   * Environment_child_2
-	   * Environment_child_3
-	* Finding	
-	   * Finding_child_1
-	   * Finding_child_2
-	   * Finding_child_3
-	* Promotinal Activities	
-	   * Promotinal_Activities_1
-	   * Promotinal_Activities_2
-	   * Promotinal_Activities_3
+  * Environment 
+    * Environment_child_1
+    * Environment_child_2
+    * Environment_child_3
+  * Finding	
+    * Finding_child_1
+    * Finding_child_2
+    * Finding_child_3
+  * Promotinal Activities	
+    * Promotinal_Activities_1
+    * Promotinal_Activities_2
+    * Promotinal_Activities_3
 * News
 * Gallery 
 * Pages
