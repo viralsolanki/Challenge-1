@@ -2,7 +2,7 @@
 /**
  * Class SampleTest
  *
- * @package Semple_psd
+ * @package Sample_psd
  */
 
 /**
@@ -13,13 +13,13 @@ class test_init extends WP_UnitTestCase {
 	function setUp() {
      
 		parent::setUp();
-		switch_theme( 'Semple_psd');
+		switch_theme( 'Sample_psd');
      
 	}
 	
 	function testActiveTheme() {
 	 
-		$this->assertTrue( 'Semple_psd' == wp_get_theme() );
+		$this->assertTrue( 'Sample_psd' == wp_get_theme() );
 		echo wp_get_theme();
 		 
 	} // end testThemeInitialization

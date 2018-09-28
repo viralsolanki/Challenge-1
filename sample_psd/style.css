@@ -1,9 +1,10 @@
 /*!
-Theme Name: Semple_psd
+Theme Name: Sample_psd
 Theme URI: http://underscores.me/
 Author: Viral Solanki
 Author URI: http://underscores.me/
-Description: This is a assignment no.1 semple_psd home page
+Description:  This Theme is completely based on rtcamp’s assignment no.1 Sample_psd to WordPress Theme. It Strarts with the header section contains a theme-logo and a header-menu. The theme logo can be customize by 'Theme_options' in the admin section. Mainly it contains a Slider in beginnig of body section in Home page. Slider can be customize by 'Slider' post_type in the admin section. body section of Homepage have a division which contains list of titles of child pages of Home page. When pointer enters in any list or any title the sub-pages of that respective page will be displayed. As pointer leaves the list sub-pages will get disappeared. In the footer section of the page contains a Sidebar,a footer-menu, a footer-caption and a footer-Image all of this can be customize by 'Theme_options' page in admin section. Some custom Widgets will also get created at theme activation you can use it by adding it to the Sidebar.   
+  
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -13,7 +14,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Semple_psd is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Sample_psd is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -1114,9 +1115,9 @@ object {
 	right:0;
 	z-index:9;
 	top:0;
-	background-color:#111;
+	background-color:#1119;
 	position:fixed;
-	height:100%;
+	height:100vh;
 	transition: 0.5s;
 }
 	
@@ -1158,13 +1159,13 @@ object {
 	position:static;
 	display:none;
 	margin:5px 0 0 0 ;
-	background-color:#111;
+	background-color:#1119;
 	color: yellow;
 		
 }
 
 .sidebar_nav ul ul ul{
-	background-color:#111;
+	background-color:#1119;
 }
 
 .sidebar_nav ul ul li{
@@ -1708,5 +1709,9 @@ display:block;
 	.chiled-pages a{
 		height:34px;
 	}
+	#widget-data:last-child
+	{
+        padding-right: 20px;
+    }
 
 }

@@ -1,8 +1,8 @@
 <?php
 /**
- * Semple_psd Theme Customizer
+ * Sample_psd Theme Customizer
  *
- * @package Semple_psd
+ * @package Sample_psd
  */
 
 /**

@@ -1,10 +1,10 @@
 <?php
 /**
- * Semple_psd functions and definitions
+ * Sample_psd functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Semple_psd
+ * @package Sample_psd
  */
 
 if ( ! function_exists( 'semple_psd_setup' ) ) :
@@ -167,7 +167,7 @@ add_action( 'widgets_init', 'my_widget' );
 /**
  * Register required styles and scripts
  */
-function semple_psd_scripts() {
+function sample_psd_scripts() {
 	wp_enqueue_style( 'semple_psd-style', get_stylesheet_uri(), array(), wp_rand( 111, 9999 ) );
 
 		/*boostrap js file*/
@@ -201,7 +201,7 @@ function semple_psd_scripts() {
 	// jquery file.
 	wp_deregister_script( 'jquery' );
 
-		wp_register_script( 'jquery', get_template_directory_uri() . '/lib/jquery.js', '', true, '' );
+		wp_register_script( 'jquery', get_template_directory_uri() . '/lib/jquery.js', '20151215', true, '' );
 	wp_enqueue_script( 'jquery' );
 
 	// jquery for simple_psd theme.
@@ -222,7 +222,7 @@ function semple_psd_scripts() {
 	);
 }
 
-add_action( 'wp_enqueue_scripts', 'semple_psd_scripts' );
+add_action( 'wp_enqueue_scripts', 'sample_psd_scripts' );
 
 /**
  * Register required styles and scripts for admin side
@@ -462,9 +462,7 @@ add_action( 'after_switch_theme', 'create_slider_posts_for_theme' );
 
 /**
 
-********************ADD POSTS TO POSTS POST TYPE AT THEME ACTIVATION***************
-*/
-
+********************ADD POSTS TO POSTS POST TYPE AT THEME ACTIVATION****************/
 
 if ( ! function_exists( 'create_news_posts_for_theme()' ) ) :
 
@@ -472,14 +470,13 @@ if ( ! function_exists( 'create_news_posts_for_theme()' ) ) :
 	 * Create posts of news category at theme activation
 	 */
 	function create_news_posts_for_theme() {
-
-		$cat_id = get_cat_ID( 'News' );
-		if ( 0 === $cat_id ) {
-			$cat = array(
-				'cat_name' => 'News',
+        //add_action( 'admin_init', 'create_news_category' );
+		wp_insert_term(
+		    'News',
+			'category',
+			array(
+			'slug' => 'news')
 			);
-			wp_insert_category( $cat );
-		}
 		$new_cat_id = get_cat_ID( 'News' );
 
 		$post_titles = array( 'News1', 'News2', 'News3' );
@@ -617,10 +614,9 @@ function set_featured_image( $image_name, $post_title, $post_type, $width, $heig
 		return;
 	}
 	$uploaddir = wp_upload_dir();
-
 	$file       = get_template_directory() . '/images/' . basename( $image_name );
-	$uploadfile = $uploaddir['basedir'] . '\\' . basename( $image_name );
-
+	$uploadfile = $uploaddir['path'] . '/' . basename( $image_name );
+    
 	$result = copy( $file, $uploadfile );
 	if (!$result ) {
 		return;
@@ -637,7 +633,7 @@ function set_featured_image( $image_name, $post_title, $post_type, $width, $heig
 		'post_status'    => 'inherit',
 
 	);
-	$attach_id   = wp_insert_attachment( $attachment, $filename );
+	$attach_id   = wp_insert_attachment( $attachment, $uploadfile );
 	$attach_data = wp_get_attachment_metadata( $attach_id, true );
 	$attach_data = array(
 		'height' => $height,

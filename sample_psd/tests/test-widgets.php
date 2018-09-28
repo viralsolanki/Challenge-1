@@ -2,7 +2,7 @@
 /**
  * Class SampleTest
  *
- * @package Semple_psd
+ * @package Sample_psd
  */
 
 /**

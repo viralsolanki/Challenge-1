@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Semple_psd
+ * @package Sample_psd
  */
 
 ?>
@@ -46,15 +46,17 @@
 						?>
 					</nav>
 
-									<?php $caption = esc_attr( get_option( 'footer_caption_field' ) ); ?>
+					<?php $cap     = esc_attr( get_option( 'footer_caption_field' ) );
+	                      $caption = ( ! empty( $cap ) ? ( $cap ) : 'Wordpress theme' ); ?>
 				<p> &copy; <?php echo esc_html( $caption ); ?>  </p>
 			</div>  
 
 						<div class="col-md-4 ml" id="footer-custom-img">
 				<?php
 					// Set the footer-image.
-					$footer_image = esc_attr( get_option( 'footer-image' ) );
-					echo '<img src="' . esc_attr( $footer_image ) . '" style="width:277px;height:85px">';
+					$footer_image  = esc_attr( get_option( 'footer-image' ) );
+	                $footer_image2 = ( ! empty( $footer_image ) ? ( $footer_image ) : get_template_directory_uri().'/images/footer-logo.png' );
+					echo '<img src="' . esc_attr( $footer_image2 ) . '" style="width:277px;height:85px">';
 				?>
 			</div>
 			</div>  

@@ -2,7 +2,7 @@
 /**
  * This class is for create a custom widget in your theme
  *
- * @package simple_theme
+ * @package semple_psd
  */
 
 /**
@@ -51,7 +51,7 @@ class LatestNewsWidget extends WP_Widget {
 
 							$posts = array(
 								'cat'            => get_cat_ID( 'News' ),
-								'sort_order'     => 'asc',
+								'orderby'     => 'modified',
 								'post_type'      => 'post',
 								'posts_per_page' => 3,
 

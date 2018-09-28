@@ -2,7 +2,7 @@
 /**
  * Register Custom Post Type
  *
- * @package simple_theme
+ * @package sample_psd
  */
  
 /**

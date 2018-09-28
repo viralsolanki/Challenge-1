@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Semple_psd
+ * @package Sample_psd
  */
 
 ?>
@@ -30,8 +30,8 @@
 
 						<div class="col-md-4 logo">
 						<?php
-
-							$theme_logo2 = esc_attr( get_option( 'Theme-logo' ) );
+							$theme_logo  = esc_attr( get_option( 'Theme-logo' ) );
+	                        $theme_logo2 = ( ! empty( $theme_logo ) ? ( $theme_logo ) : get_template_directory_uri().'/images/logo.png' );
 						?>
 						<a href="<?php echo esc_url( get_home_url() ); ?>">
 

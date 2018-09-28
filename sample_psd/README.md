@@ -10,6 +10,13 @@ Along with this document u will get the copy of the project. You can use it on y
 
 To use this Theme no aditional software or plugins are needed we just need a latest version of WordPress in worcking condition.
 
+## Description
+
+This Theme is completely based on rtcamp’s assignment no.1 Sample_psd to WordPress Theme. It Strarts with the header section contains a theme-logo and a header-menu. The theme logo can be customize by 'Theme_options' in the admin section. Mainly it contains a Slider in beginnig of body section in Home page. Slider can be customize by 'Slider' post_type
+in the admin section. body section of Homepage have a division which contains list of titles of child pages of Home page. When pointer enters in any list or any title the sub-pages of that respective page will be displayed. As pointer 
+leaves the list sub-pages will get disappeared. In the footer section of the page contains a Sidebar,a footer-menu, a footer-caption and a footer-Image all of this can be customize by 'Theme_options'
+page in admin section. Some custom Widgets will also get created at theme activation you can use it by adding it to the Sidebar.    
+  
 ## What it will do ?
 
 Activation of the theme will make some changes to the admin section as following :
@@ -19,7 +26,7 @@ Activation of the theme will make some changes to the admin section as following
 Theme contains a slider in the body section. Slider will get the data from the custom pot type **Slider**. Posts in Slider post_type will be taken as a slide in slider. 
 If you want to make any changes to the slider go to the admin section inside menu-section a new custom post_type Slider will be created you can make changes from there. 
 
-### Menu
+### Create Menu
 
 on theme activation a menu called **my_primary_menu** will be created which will be present in the header as well in footer 
 
@@ -27,46 +34,46 @@ on theme activation a menu called **my_primary_menu** will be created which will
 
 Few custom widgets will be created on the theme activation.
 
-# LATEST NEWS
-# STAY-IN-TOUCH
-# MY Navigation
+# LATEST NEWS - List All the posts of 'News' category.
+# STAY-IN-TOUCH - Add social media links in yor Website like facebook, twitter, linkdin etc.
+# MY Navigation - Display a menu contains a list of links.
 
 Widgets can be used by dragging it to the sidebar called **Footer Widegts**.
 
-### Create Theme_options_page
+### Create Theme options page
 
-Theme_options_page will be created in menu section as 'Theme_options' for do following changes :
+**Theme_options** page will be created in menu section as 'Theme_options' for do following changes :
 
-# Change Theme logo
-# Change Footer Image
-# Edit Footer Text
+* Change Theme logo
+* Change Footer Image
+* Edit Footer Text
 
 ### Create Pages
 
 On theme activation following pages wil be created :
 
-# Home
-	#Environment
-		# Environment_child_1
-		# Environment_child_2
-		# Environment_child_3
-	# Finding	
-		# Finding_child_1
-		# Finding_child_2
-		# Finding_child_3
-	# Promotinal Activities	
-		# Promotinal_Activities_1
-		# Promotinal_Activities_2
-		# Promotinal_Activities_3
-# News
-# Gallery 
-# Pages
-# Layouts
-# Features
-# Blog
-# Contact
+* Home
+	*Environment
+	   * Environment_child_1
+	   * Environment_child_2
+	   * Environment_child_3
+	* Finding	
+	   * Finding_child_1
+	   * Finding_child_2
+	   * Finding_child_3
+	* Promotinal Activities	
+	   * Promotinal_Activities_1
+	   * Promotinal_Activities_2
+	   * Promotinal_Activities_3
+* News
+* Gallery 
+* Pages
+* Layouts
+* Features
+* Blog
+* Contact
 
-## Frameworks used
+## Frameworks Used
 
 * JS framework : jQuery
 * Testing framework : PHPUnit
@@ -88,3 +95,6 @@ For testing PHPUnit testing framework is used. All the tests are rest in test di
 * [WordPress StackExchange](https://codex.wordpress.stackexchange.com)
 * etc
 
+## Demo Link
+
+* [http://mytheme.gq/](http://mytheme.gq/)

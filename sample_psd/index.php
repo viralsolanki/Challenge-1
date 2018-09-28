@@ -2,7 +2,7 @@
 /**
  * This is index of the page
  *
- * @package simple_theme
+ * @package sample_psd
  */
 
 get_header();
@@ -75,7 +75,7 @@ get_header();
 									<?php } else { ?>
 									<p style="font-weight:bold"><?php the_content(); ?></p>
 									<?php
-                                    }
+}
 									echo '</div>';
 									?>
 						<?php
@@ -100,13 +100,37 @@ get_header();
 						endwhile;
 						echo '</ul>';
 						echo '</div>';
-						endif;
+
 							?>
+					<!--=======================IF POST TYPE IS NOT AVAILABLE=====================-->
+					<?php else : ?>
+					<!--=======================SLIDER IMAGES=====================-->
+
+					<div class="sub_slide_image">
+						<img class="top" src= "<?php echo esc_url( get_template_directory_uri() . '/images/welcome.jpeg' ); ?>" style="width:1170px; height:300px;"> 	
+					</div>
+					<!--=======================POST TITLE & EXCERPT=====================-->
+
+						<div class="post_content">
+								<div class="">
+									<p>Slide Title</p>
+									<p>This is page excerpt</p>
+								</div>	
+						</div>
+					<!--=======================SLIDER INDICATORS=====================-->    
+						<div id="bubbles">
+
+							<ul class="bubbles" style="position:relative">
+
+							<div class="circle circle<?php echo esc_attr( $post_circle_count ); ?>" ></div>
+							</ul>
+						</div>
+					<?php endif; ?>
 					</div>
 					<!--=======================NEXT & PREV BUTTONS=====================-->
-					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>./images/slider-bottom-pagination.png" 
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider-bottom-pagination.png"
 					class="next" style="position:absolute" alt="next" />
-					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>./images/slider-top-pagination.png" 
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider-top-pagination.png" 
 					class="prev" style="position:absolute" alt="prev" />	
 				</div>
 			</div>
@@ -115,7 +139,10 @@ get_header();
 	<!--*****************display chiled pages*********************
 	***************************************************-->
 	<div class="container parent ">
-
+        <?php
+		$child_page          = get_page_by_title( 'Home' );
+		if( $child_page !== null): ?>
+		
 		<div class="childes row ml clearfix">
 
 		<!--=======================DISPLAY CHILDS OF HOME PAGE=====================-->
@@ -126,7 +153,6 @@ get_header();
 
 				$array_child_page_id = array();
 				$child_class         = 0;
-				$child_page          = get_page_by_title( 'Home' );
 				$home_child          = array(
 
 					'orderby'     => 'menu_order',
@@ -154,7 +180,7 @@ get_header();
 				<?php
 					$child_class++;
 					endwhile;
-				endif;
+				    endif;
 				?>
 
 			</div>					  
@@ -163,7 +189,7 @@ get_header();
 					<div class="row ml content-holder" >
 					<?php
 						$child = array(
-
+							'sort_column' => 'menu_order',
 							'post_type'   => 'page',
 							'post_parent' => $child_page->ID,
 
@@ -195,8 +221,9 @@ get_header();
 
 						<?php
 							$args = array(
-								'post_type' => 'page',
-								'include'   => get_the_top_parent_id(),
+								'sort_column' => 'menu_order',
+								'post_type'   => 'page',
+								'include'     => get_the_top_parent_id(),
 
 							);
 
@@ -235,15 +262,15 @@ get_header();
 
 								<?php
 								endwhile;
-							echo '</div>';
-							$class_name++;
+							    echo '</div>';
+							    $class_name++;
 								endif;
 						}
 						?>
 				</div>
 			</div>
-
-		</div>
+        <?php endif;?>
+	</div>
 
 	</meta>
 

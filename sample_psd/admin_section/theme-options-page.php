@@ -2,7 +2,7 @@
 /**
  * This page is for create and customize the 'Theme options page'
  *
- * @package simple_theme
+ * @package Sample_psd
  */
 
 /**
@@ -74,7 +74,7 @@ function add_caption_section() { }
  */
 function fotter_caption() {
 	$cap     = esc_attr( get_option( 'footer_caption_field' ) );
-	$caption = ( ! empty( $cap ) ? ( $cap ) : 'this is content' );
+	$caption = ( ! empty( $cap ) ? ( $cap ) : 'Wordpress theme' );
 	echo '<input type="text" name="footer_caption_field" value="' . esc_attr( $caption ) . '" style="width:400px"/>';
 }
 
@@ -83,7 +83,7 @@ function fotter_caption() {
  */
 function theme_logo_field() {
 	$theme_logo  = esc_attr( get_option( 'Theme-logo' ) );
-	$theme_logo2 = ( ! empty( $theme_logo ) ? ( $theme_logo ) : 'get_template_directory_uri()./images/logo.jpg' );
+	$theme_logo2 = ( ! empty( $theme_logo ) ? ( $theme_logo ) : get_template_directory_uri().'/images/logo.png' );
 	echo '<input type="button" id="theme-logo-id" class="button" value="Select Theme logo" />';
 	echo '<input type="hidden" id="logo_id" name="Theme-logo" value="' . esc_attr( $theme_logo2 ) . '" /></br>';
 	echo '<img style="margin-top:20px;width:277px;height:85px;" id="header-image-src" src="' . esc_url( $theme_logo2 ) . '" >';
@@ -94,7 +94,7 @@ function theme_logo_field() {
  */
 function theme_image_field() {
 	$footer_image  = esc_attr( get_option( 'footer-image' ) );
-	$footer_image2 = ( ! empty( $footer_image ) ? ( $footer_image ) : 'get_template_directory_uri()./images/footer-logo.jpg' );
+	$footer_image2 = ( ! empty( $footer_image ) ? ( $footer_image ) : get_template_directory_uri().'/images/footer-logo.png' );
 	echo '<input type="button" id="footer-image-id" class="button" value="Select Footer Image" />';
 	echo '<input type="hidden" id="image_id" name="footer-image" value="' . esc_attr( $footer_image2 ) . '" /></br>';
 	echo '<img style="margin-top:20px;width:277px;height:85px;" id="footer-image-src" src="' . esc_url( $footer_image2 ) . '" >';
