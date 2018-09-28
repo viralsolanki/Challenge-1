@@ -8,7 +8,7 @@ Along with this document you will get the copy of the project. You can use it on
 
 ### Requirements
 
-To use this Theme no additional software or plugins are needed we just need a latest version of WordPress in working condition.
+To use this Theme, No additional software or plugins are needed we just need a latest version of WordPress in working condition.
 
 ## Description
 
